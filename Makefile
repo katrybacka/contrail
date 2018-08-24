@@ -83,6 +83,10 @@ install:
 testenv: ## Setup docker based test environment
 	./tools/testenv.sh
 
+zero_db:
+	./tools/reset_db_mysql.sh
+	./tools/reset_db_psql.sh
+
 reset_db: ## Reset databases with latest schema and load initial data
 	./tools/reset_db_mysql.sh
 	./tools/reset_db_psql.sh
